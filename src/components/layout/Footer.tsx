@@ -164,6 +164,7 @@ export function Footer() {
 
               {/* Form */}
               <form ref={formRef} onSubmit={handleSubmit} className="px-5 pb-5 space-y-3">
+                <input type="hidden" name="to_email" value="fireking5996@gmail.com" />
                 <div>
                   <label htmlFor="contact-name" className="text-[11px] text-gray-500 font-medium mb-1 block">
                     {t("footer.formName")}
@@ -183,7 +184,7 @@ export function Footer() {
                   </label>
                   <input
                     id="contact-email"
-                    name="email"
+                    name="reply_to"
                     type="email"
                     required
                     className="w-full px-3 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-sm text-white placeholder-gray-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors"
