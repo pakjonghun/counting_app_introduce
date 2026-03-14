@@ -58,12 +58,12 @@ function PhoneFrame({
 function ItemListScreen() {
   const { t } = useTranslation()
   const items = [
-    { name: "콜라 500ml", barcode: "8801234567890", qty: 24, color: "bg-red-400" },
-    { name: "생수 2L", barcode: "8809876543210", qty: 48, color: "bg-blue-400" },
-    { name: "초코파이", barcode: "8805432167890", qty: 12, color: "bg-amber-500" },
-    { name: "새우깡", barcode: "8807654321098", qty: 36, color: "bg-orange-400" },
-    { name: "바나나우유", barcode: "8803456789012", qty: 18, color: "bg-yellow-400" },
-    { name: "삼각김밥", barcode: "8802345678901", qty: 8, color: "bg-green-400" },
+    { nameKey: "screenshots.mock.item1", barcode: "8801234567890", qty: 24, color: "bg-red-400" },
+    { nameKey: "screenshots.mock.item2", barcode: "8809876543210", qty: 48, color: "bg-blue-400" },
+    { nameKey: "screenshots.mock.item3", barcode: "8805432167890", qty: 12, color: "bg-amber-500" },
+    { nameKey: "screenshots.mock.item4", barcode: "8807654321098", qty: 36, color: "bg-orange-400" },
+    { nameKey: "screenshots.mock.item5", barcode: "8803456789012", qty: 18, color: "bg-yellow-400" },
+    { nameKey: "screenshots.mock.item6", barcode: "8802345678901", qty: 8, color: "bg-green-400" },
   ]
 
   return (
@@ -81,13 +81,13 @@ function ItemListScreen() {
         {/* Search bar */}
         <div className="flex items-center gap-1.5 bg-white/[0.06] rounded-lg px-2.5 py-1.5">
           <Search size={9} className="text-white/30" />
-          <span className="text-[8px] text-white/25">Search items...</span>
+          <span className="text-[8px] text-white/25">{t("screenshots.mock.searchPlaceholder")}</span>
         </div>
       </div>
 
       {/* Count badge */}
       <div className="px-3.5 pb-1.5">
-        <span className="text-[8px] text-white/30">6 items · 146 total</span>
+        <span className="text-[8px] text-white/30">{t("screenshots.mock.itemCount")}</span>
       </div>
 
       {/* Item list */}
@@ -101,7 +101,7 @@ function ItemListScreen() {
               <Package size={10} className={`${item.color.replace("bg-", "text-")}`} />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-[9px] text-white/80 font-medium truncate">{item.name}</p>
+              <p className="text-[9px] text-white/80 font-medium truncate">{t(item.nameKey)}</p>
               <p className="text-[7px] text-white/25 font-mono">{item.barcode}</p>
             </div>
             <span className="text-[10px] font-bold text-accent tabular-nums">×{item.qty}</span>
@@ -112,7 +112,7 @@ function ItemListScreen() {
       {/* Bottom bar */}
       <div className="px-3.5 py-2 mt-auto border-t border-white/[0.06]">
         <div className="flex items-center justify-between">
-          <span className="text-[8px] text-white/30">Total</span>
+          <span className="text-[8px] text-white/30">{t("screenshots.mock.total")}</span>
           <span className="text-[10px] font-bold text-accent">146</span>
         </div>
       </div>
@@ -122,11 +122,13 @@ function ItemListScreen() {
 
 /* ─── 2. Scanner Ready Screen ─── */
 function ScannerScreen() {
+  const { t } = useTranslation()
+
   return (
     <div className="flex flex-col h-full">
       {/* Header */}
       <div className="px-3.5 pt-3 pb-2 flex items-center justify-between">
-        <h3 className="text-white/90 text-[11px] font-bold">Barcode Scanner</h3>
+        <h3 className="text-white/90 text-[11px] font-bold">{t("screenshots.mock.barcodeScanner")}</h3>
         <div className="w-5 h-5 rounded-md bg-white/[0.06] flex items-center justify-center">
           <X size={9} className="text-white/40" />
         </div>
@@ -158,7 +160,7 @@ function ScannerScreen() {
         {/* Instruction */}
         <div className="absolute bottom-4 left-0 right-0 text-center">
           <span className="text-[8px] text-white/40 bg-black/40 px-2 py-0.5 rounded-full">
-            Point camera at barcode
+            {t("screenshots.mock.pointCamera")}
           </span>
         </div>
       </div>
@@ -168,17 +170,17 @@ function ScannerScreen() {
         <div className="flex items-center justify-center gap-3">
           <div className="flex items-center gap-1.5 bg-accent/10 rounded-lg px-2.5 py-1.5">
             <ScanBarcode size={9} className="text-accent" />
-            <span className="text-[8px] text-accent font-semibold">Continuous</span>
+            <span className="text-[8px] text-accent font-semibold">{t("screenshots.mock.continuous")}</span>
           </div>
           <div className="flex items-center gap-1.5 bg-white/[0.04] rounded-lg px-2.5 py-1.5">
-            <span className="text-[8px] text-white/30 font-medium">Single</span>
+            <span className="text-[8px] text-white/30 font-medium">{t("screenshots.mock.single")}</span>
           </div>
         </div>
       </div>
 
       {/* Recent scans */}
       <div className="px-3.5 pb-2">
-        <span className="text-[7px] text-white/25 uppercase tracking-wider">Last scanned</span>
+        <span className="text-[7px] text-white/25 uppercase tracking-wider">{t("screenshots.mock.lastScanned")}</span>
         <div className="mt-1 bg-white/[0.04] rounded-lg px-2.5 py-1.5 border border-white/[0.04]">
           <div className="flex items-center justify-between">
             <span className="text-[8px] text-white/50 font-mono">8801234567890</span>
@@ -192,10 +194,11 @@ function ScannerScreen() {
 
 /* ─── 3. Scanning Active Screen ─── */
 function ScanningScreen() {
+  const { t } = useTranslation()
   const scanned = [
-    { code: "8801234567890", name: "콜라 500ml", time: "0:03", added: 1 },
-    { code: "8809876543210", name: "생수 2L", time: "0:08", added: 2 },
-    { code: "8805432167890", name: "초코파이", time: "0:12", added: 1 },
+    { code: "8801234567890", nameKey: "screenshots.mock.item1", time: "0:03", added: 1 },
+    { code: "8809876543210", nameKey: "screenshots.mock.item2", time: "0:08", added: 2 },
+    { code: "8805432167890", nameKey: "screenshots.mock.item3", time: "0:12", added: 1 },
   ]
 
   return (
@@ -205,10 +208,10 @@ function ScanningScreen() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <h3 className="text-white/90 text-[11px] font-bold">Scanning...</h3>
+            <h3 className="text-white/90 text-[11px] font-bold">{t("screenshots.mock.scanningActive")}</h3>
           </div>
           <div className="bg-red-500/20 rounded-md px-2 py-0.5">
-            <span className="text-[8px] text-red-400 font-semibold">Stop</span>
+            <span className="text-[8px] text-red-400 font-semibold">{t("screenshots.mock.stop")}</span>
           </div>
         </div>
       </div>
@@ -233,9 +236,9 @@ function ScanningScreen() {
 
       {/* Scan counter */}
       <div className="px-3.5 py-2 flex items-center justify-between">
-        <span className="text-[8px] text-white/30">Scanned items</span>
+        <span className="text-[8px] text-white/30">{t("screenshots.mock.scannedItems")}</span>
         <div className="bg-accent/10 rounded-full px-2 py-0.5">
-          <span className="text-[9px] text-accent font-bold">3 scans</span>
+          <span className="text-[9px] text-accent font-bold">{t("screenshots.mock.scanCount")}</span>
         </div>
       </div>
 
@@ -250,7 +253,7 @@ function ScanningScreen() {
               <span className="text-[8px] text-green-400 font-bold">+{item.added}</span>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-[9px] text-white/80 font-medium truncate">{item.name}</p>
+              <p className="text-[9px] text-white/80 font-medium truncate">{t(item.nameKey)}</p>
               <p className="text-[7px] text-white/25 font-mono">{item.code}</p>
             </div>
             <span className="text-[7px] text-white/20">{item.time}</span>
@@ -261,8 +264,8 @@ function ScanningScreen() {
       {/* Total bar */}
       <div className="px-3.5 py-2 mt-auto border-t border-white/[0.06]">
         <div className="flex items-center justify-between">
-          <span className="text-[8px] text-white/30">Session total</span>
-          <span className="text-[10px] font-bold text-green-400">+4 items</span>
+          <span className="text-[8px] text-white/30">{t("screenshots.mock.sessionTotal")}</span>
+          <span className="text-[10px] font-bold text-green-400">{t("screenshots.mock.addedItems")}</span>
         </div>
       </div>
     </div>
@@ -271,11 +274,13 @@ function ScanningScreen() {
 
 /* ─── 4. Settings Screen ─── */
 function SettingsScreen() {
+  const { t } = useTranslation()
+
   return (
     <div className="flex flex-col h-full">
       {/* Header */}
       <div className="px-3.5 pt-3 pb-2">
-        <h3 className="text-white/90 text-[11px] font-bold">Settings</h3>
+        <h3 className="text-white/90 text-[11px] font-bold">{t("screenshots.settings")}</h3>
       </div>
 
       {/* Settings groups */}
@@ -283,16 +288,16 @@ function SettingsScreen() {
         {/* General */}
         <div>
           <span className="text-[7px] text-white/25 uppercase tracking-wider font-semibold">
-            General
+            {t("screenshots.mock.general")}
           </span>
           <div className="mt-1 space-y-1">
             <div className="flex items-center gap-2 bg-white/[0.04] rounded-lg px-2.5 py-2 border border-white/[0.04]">
               <div className="w-5 h-5 rounded-md bg-white/[0.06] flex items-center justify-center flex-shrink-0">
                 <Globe size={9} className="text-blue-400" />
               </div>
-              <span className="text-[9px] text-white/70 flex-1">Language</span>
+              <span className="text-[9px] text-white/70 flex-1">{t("screenshots.mock.language")}</span>
               <div className="flex items-center gap-0.5">
-                <span className="text-[8px] text-white/30">한국어</span>
+                <span className="text-[8px] text-white/30">{t("screenshots.mock.currentLang")}</span>
                 <ChevronRight size={8} className="text-white/15" />
               </div>
             </div>
@@ -300,7 +305,7 @@ function SettingsScreen() {
               <div className="w-5 h-5 rounded-md bg-white/[0.06] flex items-center justify-center flex-shrink-0">
                 <Hash size={9} className="text-accent" />
               </div>
-              <span className="text-[9px] text-white/70 flex-1">Default Scan Qty</span>
+              <span className="text-[9px] text-white/70 flex-1">{t("screenshots.mock.defaultScanQty")}</span>
               <div className="flex items-center gap-0.5">
                 <span className="text-[8px] text-accent font-bold">×1</span>
                 <ChevronRight size={8} className="text-white/15" />
@@ -329,7 +334,7 @@ function SettingsScreen() {
                 <Cloud size={9} className="text-green-400" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[9px] text-white/70">Connected</p>
+                <p className="text-[9px] text-white/70">{t("screenshots.mock.connected")}</p>
                 <p className="text-[6.5px] text-white/25 truncate">user@gmail.com</p>
               </div>
             </div>
@@ -337,7 +342,7 @@ function SettingsScreen() {
               <div className="w-5 h-5 rounded-md bg-white/[0.06] flex items-center justify-center flex-shrink-0">
                 <Mail size={9} className="text-emerald-400" />
               </div>
-              <span className="text-[9px] text-white/70 flex-1">Linked Sheet</span>
+              <span className="text-[9px] text-white/70 flex-1">{t("screenshots.mock.linkedSheet")}</span>
               <div className="flex items-center gap-0.5">
                 <span className="text-[7px] text-green-400">●</span>
                 <ChevronRight size={8} className="text-white/15" />
@@ -349,14 +354,14 @@ function SettingsScreen() {
         {/* Data */}
         <div>
           <span className="text-[7px] text-white/25 uppercase tracking-wider font-semibold">
-            Data
+            {t("screenshots.mock.data")}
           </span>
           <div className="mt-1 space-y-1">
             <div className="flex items-center gap-2 bg-red-500/[0.06] rounded-lg px-2.5 py-2 border border-red-500/[0.08]">
               <div className="w-5 h-5 rounded-md bg-red-500/10 flex items-center justify-center flex-shrink-0">
                 <Trash2 size={9} className="text-red-400" />
               </div>
-              <span className="text-[9px] text-red-400/80 flex-1">Reset All Data</span>
+              <span className="text-[9px] text-red-400/80 flex-1">{t("screenshots.mock.resetAllData")}</span>
             </div>
           </div>
         </div>

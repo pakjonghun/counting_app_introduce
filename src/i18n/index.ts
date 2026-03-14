@@ -12,13 +12,14 @@ i18n
       ko: { translation: ko },
       en: { translation: en },
     },
-    fallbackLng: "ko",
+    fallbackLng: "en",
     supportedLngs: ["ko", "en"],
+    nonExplicitSupportedLngs: true,
     interpolation: {
       escapeValue: false,
     },
     detection: {
-      order: ["navigator", "htmlTag"],
+      order: ["localStorage", "navigator", "htmlTag"],
       caches: ["localStorage"],
     },
   })

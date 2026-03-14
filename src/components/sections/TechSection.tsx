@@ -1,11 +1,10 @@
 import { useTranslation } from "react-i18next"
 import { motion } from "framer-motion"
-import { Database, WifiOff, Smartphone, ShieldCheck } from "lucide-react"
+import { Database, WifiOff, ShieldCheck } from "lucide-react"
 
 const techs = [
   { icon: Database, tagKey: "tech.eventSourcing.tag", titleKey: "tech.eventSourcing.title", descKey: "tech.eventSourcing.description" },
   { icon: WifiOff, tagKey: "tech.offlineFirst.tag", titleKey: "tech.offlineFirst.title", descKey: "tech.offlineFirst.description" },
-  { icon: Smartphone, tagKey: "tech.crossPlatform.tag", titleKey: "tech.crossPlatform.title", descKey: "tech.crossPlatform.description" },
   { icon: ShieldCheck, tagKey: "tech.transaction.tag", titleKey: "tech.transaction.title", descKey: "tech.transaction.description" },
 ]
 
@@ -44,7 +43,7 @@ export function TechSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
+        <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
           {techs.map((tech, index) => (
             <motion.div
               key={tech.titleKey}

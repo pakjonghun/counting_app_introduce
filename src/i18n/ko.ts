@@ -7,7 +7,7 @@ const ko = {
     menu: "메뉴",
   },
   hero: {
-    badge: "오프라인 우선 재고 관리",
+    badge: "인터넷 없이도 되는 재고 관리",
     titleLine1: "바코드 스캔 한 번으로",
     titleHighlight: "재고 카운팅",
     titleEnd: " 끝",
@@ -16,7 +16,7 @@ const ko = {
     ctaPrimary: "무료 다운로드",
     ctaSecondary: "자세히 보기",
     trustFree: "완전 무료",
-    trustPlatform: "6개 플랫폼 지원",
+    trustPlatform: "Android 지원",
     trustOffline: "오프라인 동작",
     floatScan: "+1 스캔 완료 ✓",
     floatOffline: "오프라인 동작 중",
@@ -32,26 +32,26 @@ const ko = {
     barcode: {
       title: "바코드 스캔",
       description:
-        "카메라로 바코드를 인식하고 연속 스캔 모드로 빠르게 재고를 등록하세요.",
+        "카메라로 바코드를 인식하고 연속으로 빠르게 스캔하여 재고를 등록하세요.",
     },
     session: {
-      title: "세션 기반 관리",
+      title: "작업별 분리 관리",
       description:
-        "독립적인 세션으로 작업을 분리하고 체계적으로 재고를 관리합니다.",
+        "날짜별, 구역별로 작업을 나눠서 체계적으로 재고를 관리합니다.",
     },
     history: {
       title: "모든 변경 추적",
       description:
-        "이벤트 소싱으로 모든 변경 이력을 기록하고 언제든 Undo할 수 있습니다.",
+        "모든 수정 내역이 자동으로 기록되어, 실수해도 언제든 되돌릴 수 있습니다.",
     },
     sheets: {
       title: "Google Sheets 연동",
       description:
-        "CSV 파일이나 Google Sheets와 양방향으로 데이터를 동기화합니다.",
+        "엑셀 파일이나 Google Sheets로 데이터를 주고받을 수 있습니다.",
     },
     offline: {
       title: "오프라인 작동",
-      description: "SQLite 로컬 저장소로 인터넷 없이도 완벽하게 동작합니다.",
+      description: "인터넷 연결 없이도 모든 기능이 완벽하게 동작합니다.",
     },
     i18n: {
       title: "다국어 지원",
@@ -64,8 +64,8 @@ const ko = {
     title: "3단계로 시작하세요",
     subtitle: "복잡한 설정 없이 바로 재고 카운팅을 시작할 수 있습니다.",
     step1: {
-      title: "세션 만들기",
-      description: "새 카운팅 세션을 생성하고 작업 범위를 설정하세요.",
+      title: "새 작업 만들기",
+      description: "새 카운팅 작업을 만들고 범위를 정하세요.",
     },
     step2: {
       title: "바코드 스캔",
@@ -79,40 +79,64 @@ const ko = {
   screenshots: {
     label: "Preview",
     title: "앱 미리보기",
-    subtitle: "직관적인 인터페이스로 누구나 쉽게 사용할 수 있습니다.",
+    subtitle: "깔끔한 화면 구성으로 누구나 쉽게 사용할 수 있습니다.",
     items: "아이템 목록",
     scanner: "바코드 스캔",
     scanning: "스캔 중",
     settings: "설정",
+    mock: {
+      item1: "콜라 500ml",
+      item2: "생수 2L",
+      item3: "초코파이",
+      item4: "새우깡",
+      item5: "바나나우유",
+      item6: "삼각김밥",
+      searchPlaceholder: "상품 검색...",
+      itemCount: "6개 상품 · 총 146개",
+      total: "합계",
+      barcodeScanner: "바코드 스캐너",
+      pointCamera: "바코드에 카메라를 향하세요",
+      continuous: "연속",
+      single: "단일",
+      lastScanned: "최근 스캔",
+      scanningActive: "스캔 중...",
+      stop: "중지",
+      scannedItems: "스캔한 상품",
+      scanCount: "3건 스캔",
+      sessionTotal: "작업 합계",
+      addedItems: "+4개",
+      general: "일반",
+      language: "언어",
+      currentLang: "한국어",
+      defaultScanQty: "기본 스캔 수량",
+      connected: "연결됨",
+      linkedSheet: "연결된 시트",
+      data: "데이터",
+      resetAllData: "모든 데이터 초기화",
+    },
   },
   tech: {
     label: "Technology",
-    title: "견고한 기술 기반",
+    title: "안심하고 쓸 수 있는 이유",
     subtitle:
-      "단순한 앱이 아닙니다. 엔터프라이즈급 아키텍처로 데이터를 안전하게 관리합니다.",
+      "단순한 앱이 아닙니다. 데이터를 안전하고 정확하게 관리합니다.",
     eventSourcing: {
-      tag: "Architecture",
-      title: "이벤트 소싱",
+      tag: "기록",
+      title: "모든 변경 기록 보관",
       description:
-        "모든 변경을 불변 이벤트로 기록합니다. 언제든 과거 상태를 재계산하고 감사 추적이 가능합니다.",
+        "수량 변경, 삭제 등 모든 작업 기록이 남아있어 언제든 이전 상태로 되돌리거나 변경 내역을 확인할 수 있습니다.",
     },
     offlineFirst: {
-      tag: "Storage",
-      title: "오프라인 퍼스트",
+      tag: "저장",
+      title: "인터넷 없이도 OK",
       description:
-        "SQLite 기반 로컬 저장소로 네트워크 의존성 제로. 창고, 매장 어디서든 안정적으로 동작합니다.",
-    },
-    crossPlatform: {
-      tag: "Platform",
-      title: "크로스 플랫폼",
-      description:
-        "Flutter로 구축되어 iOS, Android, Web, Windows, macOS, Linux 6개 플랫폼을 지원합니다.",
+        "데이터가 기기에 바로 저장되어 인터넷이 끊겨도 걱정 없습니다. 창고, 매장 어디서든 문제없이 사용하세요.",
     },
     transaction: {
-      tag: "Reliability",
-      title: "트랜잭션 안전성",
+      tag: "안정성",
+      title: "데이터 보호",
       description:
-        "단일 트랜잭션 내에서 이벤트를 처리하고 오류 발생 시 자동 롤백하여 데이터 무결성을 보장합니다.",
+        "작업 중 오류가 생겨도 데이터가 깨지지 않도록 자동으로 보호합니다. 안심하고 사용하세요.",
     },
   },
   cta: {

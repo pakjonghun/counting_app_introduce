@@ -7,7 +7,7 @@ const en = {
     menu: "Menu",
   },
   hero: {
-    badge: "Offline-first Inventory Management",
+    badge: "Works Without Internet",
     titleLine1: "Inventory Counting",
     titleHighlight: "Done",
     titleEnd: " with One Scan",
@@ -16,7 +16,7 @@ const en = {
     ctaPrimary: "Free Download",
     ctaSecondary: "Learn More",
     trustFree: "Completely Free",
-    trustPlatform: "6 Platforms",
+    trustPlatform: "Android",
     trustOffline: "Works Offline",
     floatScan: "+1 Scan Done ✓",
     floatOffline: "Working Offline",
@@ -33,27 +33,27 @@ const en = {
     barcode: {
       title: "Barcode Scanning",
       description:
-        "Recognize barcodes with your camera and register inventory quickly with continuous scan mode.",
+        "Recognize barcodes with your camera and register inventory quickly by scanning one after another.",
     },
     session: {
-      title: "Session-based Management",
+      title: "Organized by Task",
       description:
-        "Separate tasks with independent sessions and manage inventory systematically.",
+        "Split work by date, area, or any way you like — and manage inventory step by step.",
     },
     history: {
       title: "Full Change Tracking",
       description:
-        "Record all change history with event sourcing and undo anytime.",
+        "Every change is automatically recorded, so you can undo mistakes anytime.",
     },
     sheets: {
       title: "Google Sheets Sync",
       description:
-        "Synchronize data bidirectionally with CSV files or Google Sheets.",
+        "Import and export data with spreadsheet files or Google Sheets.",
     },
     offline: {
       title: "Offline Operation",
       description:
-        "Works perfectly without internet using SQLite local storage.",
+        "Every feature works perfectly, even without internet.",
     },
     i18n: {
       title: "Multi-language",
@@ -67,8 +67,8 @@ const en = {
     subtitle:
       "Start inventory counting right away without complex setup.",
     step1: {
-      title: "Create Session",
-      description: "Create a new counting session and set the scope of work.",
+      title: "Create a Task",
+      description: "Start a new counting task and set what you want to count.",
     },
     step2: {
       title: "Scan Barcodes",
@@ -88,35 +88,59 @@ const en = {
     scanner: "Scanner",
     scanning: "Scanning",
     settings: "Settings",
+    mock: {
+      item1: "Cola 500ml",
+      item2: "Water 2L",
+      item3: "Choco Pie",
+      item4: "Shrimp Chips",
+      item5: "Banana Milk",
+      item6: "Rice Ball",
+      searchPlaceholder: "Search items...",
+      itemCount: "6 items · 146 total",
+      total: "Total",
+      barcodeScanner: "Barcode Scanner",
+      pointCamera: "Point camera at barcode",
+      continuous: "Continuous",
+      single: "Single",
+      lastScanned: "Last scanned",
+      scanningActive: "Scanning...",
+      stop: "Stop",
+      scannedItems: "Scanned items",
+      scanCount: "3 scans",
+      sessionTotal: "Task total",
+      addedItems: "+4 items",
+      general: "General",
+      language: "Language",
+      currentLang: "English",
+      defaultScanQty: "Default Scan Qty",
+      connected: "Connected",
+      linkedSheet: "Linked Sheet",
+      data: "Data",
+      resetAllData: "Reset All Data",
+    },
   },
   tech: {
     label: "Technology",
-    title: "Built on Solid Tech",
+    title: "Why You Can Trust It",
     subtitle:
-      "Not just a simple app. Enterprise-grade architecture to keep your data safe.",
+      "Not just a simple app. Your data is managed safely and accurately.",
     eventSourcing: {
-      tag: "Architecture",
-      title: "Event Sourcing",
+      tag: "History",
+      title: "Every Change Saved",
       description:
-        "Records all changes as immutable events. Recalculate past states and audit trails anytime.",
+        "Every edit and deletion is recorded, so you can always go back or review what changed.",
     },
     offlineFirst: {
       tag: "Storage",
-      title: "Offline First",
+      title: "Works Without Internet",
       description:
-        "Zero network dependency with SQLite local storage. Works reliably in warehouses and stores.",
-    },
-    crossPlatform: {
-      tag: "Platform",
-      title: "Cross Platform",
-      description:
-        "Built with Flutter, supporting 6 platforms: iOS, Android, Web, Windows, macOS, and Linux.",
+        "Data is saved directly on your device, so no worries even if the connection drops. Use it anywhere — warehouses, stores, you name it.",
     },
     transaction: {
-      tag: "Reliability",
-      title: "Transaction Safety",
+      tag: "Stability",
+      title: "Data Protection",
       description:
-        "Processes events within a single transaction with automatic rollback on errors to ensure data integrity.",
+        "If something goes wrong during an operation, your data is automatically protected from corruption.",
     },
   },
   cta: {
