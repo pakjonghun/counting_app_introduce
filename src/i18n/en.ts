@@ -4,6 +4,7 @@ const en = {
     howItWorks: "How to Use",
     tech: "Tech",
     download: "Download",
+    comingSoon: "Coming Soon",
     menu: "Menu",
   },
   hero: {
@@ -13,9 +14,9 @@ const en = {
     titleEnd: " with One Scan",
     description:
       "Scan a barcode with your camera and quantities update automatically.\nAn inventory counting app that works perfectly — even offline.",
-    ctaPrimary: "Free Download",
+    ctaPrimary: "Download",
     ctaSecondary: "Learn More",
-    trustFree: "Completely Free",
+    trustFree: "Easy to Start",
     trustPlatform: "Android",
     trustOffline: "Works Offline",
     floatScan: "+1 Scan Done ✓",
@@ -146,8 +147,8 @@ const en = {
   cta: {
     title: "Get Started\nRight Now",
     subtitle:
-      "Revolutionize inventory management with one barcode scan.\nCompletely free, ready to use instantly.",
-    button: "Free Download",
+      "Revolutionize inventory management with one barcode scan.\nReady to use instantly.",
+    button: "Download",
     notice: "Coming soon to App Store and Google Play",
   },
   footer: {
@@ -211,7 +212,7 @@ const en = {
       "The App is an offline inventory counting tool based on barcode scanning. Users can scan barcodes with their camera, record inventory quantities, and export results to CSV or Google Sheets.",
     section2Title: "2. Pricing",
     section2Desc:
-      "The App is provided completely free of charge. There are no paid features, subscriptions, or in-app purchases.",
+      "The App is provided on a subscription basis. Pricing details are available within the App.",
     section3Title: "3. User Obligations",
     section3Items: [
       "You must not use the App for illegal purposes.",

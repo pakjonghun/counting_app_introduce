@@ -71,12 +71,15 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap gap-3 mt-1"
           >
-            <Button size="lg" asChild>
-              <a href="#download">
+            <div className="relative group">
+              <Button size="lg" disabled>
                 <Download size={18} />
                 {t("hero.ctaPrimary")}
-              </a>
-            </Button>
+              </Button>
+              <span className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                {t("nav.comingSoon")}
+              </span>
+            </div>
             <Button variant="glass" size="lg" asChild>
               <a href="#features">
                 {t("hero.ctaSecondary")}

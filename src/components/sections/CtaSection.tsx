@@ -50,12 +50,15 @@ export function CtaSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mt-2">
-            <Button variant="white" size="xl" asChild>
-              <a href={import.meta.env.VITE_APP_DOWNLOAD_URL || "#download"}>
+            <div className="relative group">
+              <Button variant="white" size="xl" disabled>
                 <Download size={18} />
                 {t("cta.button")}
-              </a>
-            </Button>
+              </Button>
+              <span className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                {t("nav.comingSoon")}
+              </span>
+            </div>
           </div>
 
           <p className="text-xs text-white/30 mt-2">

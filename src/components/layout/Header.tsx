@@ -87,13 +87,14 @@ export function Header() {
             {i18n.language === "ko" ? "EN" : "KO"}
           </button>
 
-          <div className="ml-2">
-            <Button size="sm" asChild>
-              <a href="#download">
-                <Download size={14} />
-                {t("nav.download")}
-              </a>
+          <div className="ml-2 relative group">
+            <Button size="sm" disabled>
+              <Download size={14} />
+              {t("nav.download")}
             </Button>
+            <span className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+              {t("nav.comingSoon")}
+            </span>
           </div>
         </nav>
 
@@ -138,13 +139,14 @@ export function Header() {
                 <Globe size={14} />
                 {i18n.language === "ko" ? "English" : "한국어"}
               </button>
-              <div className="mt-2 pt-2 border-t border-gray-100">
-                <Button size="sm" className="w-full" asChild>
-                  <a href="#download" onClick={() => setMobileOpen(false)}>
-                    <Download size={14} />
-                    {t("nav.download")}
-                  </a>
+              <div className="mt-2 pt-2 border-t border-gray-100 relative group">
+                <Button size="sm" className="w-full" disabled>
+                  <Download size={14} />
+                  {t("nav.download")}
                 </Button>
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                  {t("nav.comingSoon")}
+                </span>
               </div>
             </div>
           </motion.nav>

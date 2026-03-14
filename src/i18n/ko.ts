@@ -4,6 +4,7 @@ const ko = {
     howItWorks: "사용법",
     tech: "기술",
     download: "다운로드",
+    comingSoon: "곧 출시 예정입니다",
     menu: "메뉴",
   },
   hero: {
@@ -13,9 +14,9 @@ const ko = {
     titleEnd: " 끝",
     description:
       "카메라로 바코드를 스캔하면 수량이 자동 증가합니다.\n인터넷 없이도 완벽하게 동작하는 재고 카운팅 앱.",
-    ctaPrimary: "무료 다운로드",
+    ctaPrimary: "다운로드",
     ctaSecondary: "자세히 보기",
-    trustFree: "완전 무료",
+    trustFree: "간편한 시작",
     trustPlatform: "Android 지원",
     trustOffline: "오프라인 동작",
     floatScan: "+1 스캔 완료 ✓",
@@ -142,8 +143,8 @@ const ko = {
   cta: {
     title: "지금 바로\n시작하세요",
     subtitle:
-      "바코드 스캔 한 번으로 재고 관리를 혁신하세요.\n완전 무료, 설치 즉시 사용 가능합니다.",
-    button: "무료 다운로드",
+      "바코드 스캔 한 번으로 재고 관리를 혁신하세요.\n설치 즉시 사용 가능합니다.",
+    button: "다운로드",
     notice: "곧 App Store와 Google Play에 출시됩니다",
   },
   footer: {
@@ -207,7 +208,7 @@ const ko = {
       "앱은 바코드 스캔을 기반으로 한 오프라인 재고 카운팅 도구입니다. 사용자는 카메라로 바코드를 스캔하고 재고 수량을 기록하며, 결과를 CSV 또는 Google Sheets로 내보낼 수 있습니다.",
     section2Title: "2. 이용 요금",
     section2Desc:
-      "앱은 완전 무료로 제공됩니다. 별도의 유료 기능, 구독, 인앱 결제가 없습니다.",
+      "앱은 구독 기반으로 제공됩니다. 자세한 요금제는 앱 내에서 확인할 수 있습니다.",
     section3Title: "3. 이용자의 의무",
     section3Items: [
       "앱을 불법적인 목적으로 사용해서는 안 됩니다.",
